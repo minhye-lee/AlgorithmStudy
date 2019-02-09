@@ -10,7 +10,6 @@ def check_bracket(_bracket):
             return False
     if _cnt_left_bracket != _cnt_right_bracket:
         return False 
-    
     return True
 
 num = int(input())
