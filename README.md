@@ -1,2 +1,2 @@
-# algorithm
-algorithm study for myself
+# Algorithm
+This repository is a algorithm study for myself
