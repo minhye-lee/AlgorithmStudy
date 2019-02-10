@@ -4,21 +4,20 @@ class Editor:
         self.left_cursor = _string
         self.right_cursor = []
     def cmd_L(self):
-        if len(self.left_cursor) != 0:
+        if len(self.left_cursor):
             ch = self.left_cursor.pop()
             self.right_cursor.append(ch)
     def cmd_D(self):
-        if len(self.right_cursor) != 0:
+        if len(self.right_cursor):
             ch = self.right_cursor.pop()
             self.left_cursor.append(ch)
     def cmd_B(self):
-        if len(self.left_cursor) != 0:
+        if len(self.left_cursor):
             self.left_cursor.pop()
     def cmd_P(self, ch):
         self.left_cursor.append(ch)
     def cmd_print(self):
         return "".join(self.left_cursor+self.right_cursor[::-1])
-
 
 string = Editor(list(stdin.readline().strip()))
 cmd_cnt = int(stdin.readline())
