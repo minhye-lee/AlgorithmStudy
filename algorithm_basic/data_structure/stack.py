@@ -29,19 +29,19 @@ class Stack:
         else:
             return -1
 
-num = input()
+cmd_cnt = input()
 stack = Stack()
-for i in range(int(num)) :
-    order = input().split()
-    if(order[0] == 'push'):
-        stack.push(int(order[1]))
-    elif(order[0] == 'pop'):
+for i in range(int(cmd_cnt)) :
+    cmd = input().split()
+    if cmd[0] == 'push':
+        stack.push(int(cmd[1]))
+    elif cmd[0] == 'pop':
         print(stack.pop())
-    elif(order[0] == 'size'):
+    elif cmd[0] == 'size':
         print(stack.size())
-    elif(order[0] == 'empty'):
+    elif cmd[0] == 'empty':
         print(stack.empty())
-    elif(order[0] == 'top'):
+    elif cmd[0] == 'top':
         print(stack.top())
     else:
         print('incorrect command')
