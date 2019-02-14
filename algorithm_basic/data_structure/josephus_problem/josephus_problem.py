@@ -1,3 +1,4 @@
+#time over
 from sys import stdin
 
 def josephus(_data, _data_size, _del_index):
